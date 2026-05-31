@@ -69,13 +69,13 @@ convergent question). Defaults: **5 agents per vendor (15 total)**, **web search
 
 - **Claude** agents → spawned via the `Task` tool (`general-purpose`, sonnet).
 - **Codex** agents → via `omc ask codex "<prompt>"` (CLI; skill nesting unsupported).
-- **Gemini** agents → via `omc ask gemini "<prompt>"` (CLI).
-- Artifacts land in `.omc/artifacts/ask/`; Claude reads and aggregates.
+- **Gemini** agents → via **`agy -p "<prompt>"`** (the Gemini CLI; `-p`/`--print` = non-interactive single prompt). **Do not** use `omc ask gemini` or a bare `gemini` — Gemini is always invoked through `agy`.
+- Codex output lands in `.omc/artifacts/ask/`; **`agy` prints to stdout** — capture that directly. Claude reads both and aggregates.
 - If a vendor's CLI is absent → run that vendor with 0 agents and **note the missing perspective** (never silently treat a 2-vendor run as full consensus).
 
 ### The pipeline (run in order)
 
-1. **Propose** — each agent independently proposes a harness for the stack + a one-line rationale. (5×Claude via Task, 5×Codex + 5×Gemini via `omc ask`.) Use framing variations (risk-averse, first-principles, CI-focused, DX-focused, contrarian) so same-vendor agents aren't identical.
+1. **Propose** — each agent independently proposes a harness for the stack + a one-line rationale. (5×Claude via Task, 5×Codex via `omc ask codex`, 5×Gemini via `agy -p`.) Use framing variations (risk-averse, first-principles, CI-focused, DX-focused, contrarian) so same-vendor agents aren't identical.
 2. **Web-ground** — a subset (2–3 per vendor) MUST web-search *current* best practice (tools change fast; cite year). Findings are shared back so proposals are grounded, not from stale memory.
 3. **Score** — every proposal is scored on the 5 criteria above (each 1–5). This makes aggregation mechanical. Disqualify any option failing criterion 1 or 3.
 4. **Cross-critique** — each vendor critiques the *other* vendors' top picks (catches vendor bias).
