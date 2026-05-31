@@ -1,6 +1,7 @@
 ---
 name: verification-toolchain-selector
-description: Pick the optimal verification/testing toolchain for a project BEFORE implementation, by the "shortest agent-visible feedback loop" criterion. Two modes — Default (curated lookup for known stacks, cheap) and Escalate (role-structured cross-vendor consensus: Claude + Codex + Gemini propose → web-ground → score → cross-critique → consensus, for novel/uncertain stacks). The winner is frozen into memory-bank/tech-stack.md and enforced by an AGENTS.md always-rule so agents never drift to a slow/GUI tool (e.g. Xcode GUI debugging an Expo RN app instead of Maestro + simulator). Triggers on "verification toolchain", "how should we verify", "pick test harness", "/verification-toolchain-selector", or from vibe-coding Phase 0.6 (required toolchain freeze).
+aliases: [vts, VTS]
+description: Pick the optimal verification/testing toolchain for a project BEFORE implementation, by the "shortest agent-visible feedback loop" criterion. Two modes — Default (curated lookup for known stacks, cheap) and Escalate (role-structured cross-vendor consensus: Claude + Codex + Gemini propose → web-ground → score → cross-critique → consensus, for novel/uncertain stacks). The winner is frozen into memory-bank/tech-stack.md and enforced by an AGENTS.md always-rule so agents never drift to a slow/GUI tool (e.g. Xcode GUI debugging an Expo RN app instead of Maestro + simulator). Invoke with /vts (alias) or /verification-toolchain-selector. Triggers on "vts", "VTS", "verification toolchain", "how should we verify", "pick test harness", or from vibe-coding Phase 0.6 (required toolchain freeze).
 argument-hint: "[default|escalate] <project type / stack>"
 ---
 
