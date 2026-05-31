@@ -1,6 +1,6 @@
 ---
 name: verification-toolchain-selector
-description: Pick the optimal verification/testing toolchain for a project BEFORE implementation, by the "shortest agent-visible feedback loop" criterion. Two modes — Default (curated lookup for known stacks, cheap) and Escalate (role-structured cross-vendor consensus: Claude + Codex + Gemini propose → web-ground → score → cross-critique → consensus, for novel/uncertain stacks). The winner is frozen into memory-bank/tech-stack.md and enforced by an AGENTS.md always-rule so agents never drift to a slow/GUI tool (e.g. Xcode GUI debugging an Expo RN app instead of Maestro + simulator). Triggers on "verification toolchain", "how should we verify", "pick test harness", "/verification-toolchain-selector", or from vibe-coding Phase 0.5.
+description: Pick the optimal verification/testing toolchain for a project BEFORE implementation, by the "shortest agent-visible feedback loop" criterion. Two modes — Default (curated lookup for known stacks, cheap) and Escalate (role-structured cross-vendor consensus: Claude + Codex + Gemini propose → web-ground → score → cross-critique → consensus, for novel/uncertain stacks). The winner is frozen into memory-bank/tech-stack.md and enforced by an AGENTS.md always-rule so agents never drift to a slow/GUI tool (e.g. Xcode GUI debugging an Expo RN app instead of Maestro + simulator). Triggers on "verification toolchain", "how should we verify", "pick test harness", "/verification-toolchain-selector", or from vibe-coding Phase 0.6 (required toolchain freeze).
 argument-hint: "[default|escalate] <project type / stack>"
 ---
 
@@ -117,5 +117,5 @@ These are strict — violating any one means the selection is invalid:
 
 - `stochastic-multi-agent-consensus` — the base voting mechanism this extends cross-vendor.
 - `ccg` — Codex+Gemini+Claude synthesis; the lighter cousin used for spec review (Phase 0.5).
-- `vibe-coding` — calls this at **Phase 0.5** (Default vs Escalate) and consumes the frozen `tech-stack.md` toolchain at the step green gate.
+- `vibe-coding` — calls this at the **required Phase 0.6** (Default vs Escalate; always runs before the loop) and consumes the frozen `tech-stack.md` toolchain at the step green gate.
 - `expo-react-native-verification-gate-generator`, `verification-core-claim-evidence` — reuse for mobile/native specifics rather than rederiving.
