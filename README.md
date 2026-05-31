@@ -40,3 +40,18 @@ Invoke with `/verification-toolchain-selector`, or it is called from the
 
 Built to pair with the `vibe-coding` skill (durable memory-bank methodology). Extends
 `stochastic-multi-agent-consensus` (cross-vendor) and complements `ccg`.
+
+## Author / Connect
+
+Built by **Nik Guzenko**.
+
+- 🐦 X / Twitter: [@NikGuzenko](https://x.com/NikGuzenko)
+- 💬 Telegram: [@nikguzenko](https://t.me/nikguzenko)
+
+If this skill saves you time, a ⭐ on the repo helps others find it.
+
+## Keywords
+
+Claude Code skill · AI agents · agentic coding · verification · testing · QA · test harness ·
+Maestro · Expo · React Native · Playwright · Codex · Gemini · multi-agent consensus · LLM tooling ·
+feedback loop · vibe coding · oh-my-claudecode.
